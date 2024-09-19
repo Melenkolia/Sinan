@@ -1,0 +1,1318 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome3",
+  "definitions": {
+    "Welcome3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "http"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/Welcome3Properties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "$schema",
+        "properties",
+        "required",
+        "title",
+        "type"
+      ],
+      "title": "Welcome3"
+    },
+    "Welcome3Properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "statusCode": {
+          "$ref": "#/definitions/Status"
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        },
+        "message": {
+          "$ref": "#/definitions/Error"
+        },
+        "error": {
+          "$ref": "#/definitions/Error"
+        }
+      },
+      "required": [
+        "data",
+        "error",
+        "message",
+        "status",
+        "statusCode"
+      ],
+      "title": "Welcome3Properties"
+    },
+    "Data": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/DataProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "Data"
+    },
+    "DataProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "breadCrumb": {
+          "$ref": "#/definitions/BreadCrumb"
+        },
+        "totalJobCount": {
+          "$ref": "#/definitions/Status"
+        },
+        "totalJobCountWithOutSponsored": {
+          "$ref": "#/definitions/Status"
+        },
+        "title": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobs": {
+          "$ref": "#/definitions/Jobs"
+        },
+        "filters": {
+          "$ref": "#/definitions/Filters"
+        },
+        "jobSortType": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobSeo": {
+          "$ref": "#/definitions/JobSEO"
+        },
+        "searchUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "locationText": {
+          "$ref": "#/definitions/Status"
+        },
+        "blueCollarJobs": {
+          "$ref": "#/definitions/BlueCollarJobs"
+        },
+        "isSearched": {
+          "$ref": "#/definitions/Status"
+        },
+        "currentPage": {
+          "$ref": "#/definitions/Status"
+        },
+        "noScriptUrls": {
+          "$ref": "#/definitions/NoScriptURL"
+        },
+        "suggestions": {
+          "$ref": "#/definitions/Suggestions"
+        }
+      },
+      "required": [
+        "blueCollarJobs",
+        "breadCrumb",
+        "currentPage",
+        "filters",
+        "isSearched",
+        "jobSeo",
+        "jobSortType",
+        "jobs",
+        "locationText",
+        "noScriptUrls",
+        "searchUrl",
+        "suggestions",
+        "title",
+        "totalJobCount",
+        "totalJobCountWithOutSponsored"
+      ],
+      "title": "DataProperties"
+    },
+    "BlueCollarJobs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/BlueCollarJobsProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "BlueCollarJobs"
+    },
+    "BlueCollarJobsProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/Suggestions"
+        },
+        "total": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "items",
+        "total"
+      ],
+      "title": "BlueCollarJobsProperties"
+    },
+    "Suggestions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/Error"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "Suggestions"
+    },
+    "Error": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "Error"
+    },
+    "Status": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/StatusType"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "Status"
+    },
+    "BreadCrumb": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/BreadCrumbProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BreadCrumbRequired"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "BreadCrumb"
+    },
+    "BreadCrumbProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/PurpleItems"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "title": "BreadCrumbProperties"
+    },
+    "PurpleItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/FluffyItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "PurpleItems"
+    },
+    "FluffyItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/PurpleProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "FluffyItems"
+    },
+    "PurpleProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/Status"
+        },
+        "url": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "text",
+        "url"
+      ],
+      "title": "PurpleProperties"
+    },
+    "Filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/FiltersProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "Filters"
+    },
+    "FiltersProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "companySectors": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "positionLevels": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "departments": {
+          "$ref": "#/definitions/Error"
+        },
+        "workAreas": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "workTypes": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "educationLevels": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "companyProperties": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "jobProperties": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "positions": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "jobLanguages": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "handicappedStatus": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "dates": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "workExperience": {
+          "$ref": "#/definitions/WorkExperience"
+        },
+        "locations": {
+          "$ref": "#/definitions/PurpleLocations"
+        },
+        "sortType": {
+          "$ref": "#/definitions/Error"
+        },
+        "searchCustomFilter": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "cityListDetail": {
+          "$ref": "#/definitions/Suggestions"
+        },
+        "searchForRetiredKeyword": {
+          "$ref": "#/definitions/Status"
+        },
+        "searchForRelatedJob": {
+          "$ref": "#/definitions/Status"
+        },
+        "earthquakeEmploymentProductType": {
+          "$ref": "#/definitions/Status"
+        },
+        "workModels": {
+          "$ref": "#/definitions/CompanyProperties"
+        },
+        "dontShowAppliedJobs": {
+          "$ref": "#/definitions/Error"
+        },
+        "dontShowInspectedJobs": {
+          "$ref": "#/definitions/Error"
+        },
+        "sortField": {
+          "$ref": "#/definitions/Status"
+        },
+        "sortDirection": {
+          "$ref": "#/definitions/Status"
+        },
+        "sortDirectionFilter": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "cityListDetail",
+        "companyProperties",
+        "companySectors",
+        "dates",
+        "departments",
+        "dontShowAppliedJobs",
+        "dontShowInspectedJobs",
+        "earthquakeEmploymentProductType",
+        "educationLevels",
+        "handicappedStatus",
+        "jobLanguages",
+        "jobProperties",
+        "locations",
+        "positionLevels",
+        "positions",
+        "searchCustomFilter",
+        "searchForRelatedJob",
+        "searchForRetiredKeyword",
+        "sortDirection",
+        "sortDirectionFilter",
+        "sortField",
+        "sortType",
+        "workAreas",
+        "workExperience",
+        "workModels",
+        "workTypes"
+      ],
+      "title": "FiltersProperties"
+    },
+    "CompanyProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/CompanyPropertiesProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BreadCrumbRequired"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "CompanyProperties"
+    },
+    "CompanyPropertiesProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/CitiesClass"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "title": "CompanyPropertiesProperties"
+    },
+    "CitiesClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/CitiesItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "CitiesClass"
+    },
+    "CitiesItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/FluffyProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemsRequired"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "CitiesItems"
+    },
+    "FluffyProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/Status"
+        },
+        "value": {
+          "$ref": "#/definitions/Status"
+        },
+        "count": {
+          "$ref": "#/definitions/Status"
+        },
+        "isSelected": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "count",
+        "isSelected",
+        "name",
+        "value"
+      ],
+      "title": "FluffyProperties"
+    },
+    "PurpleLocations": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/LocationsProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "PurpleLocations"
+    },
+    "LocationsProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "countries": {
+          "$ref": "#/definitions/CitiesClass"
+        },
+        "cities": {
+          "$ref": "#/definitions/CitiesClass"
+        },
+        "districts": {
+          "$ref": "#/definitions/Suggestions"
+        }
+      },
+      "required": [
+        "cities",
+        "countries",
+        "districts"
+      ],
+      "title": "LocationsProperties"
+    },
+    "WorkExperience": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/WorkExperienceProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "WorkExperience"
+    },
+    "WorkExperienceProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/CitiesClass"
+        },
+        "minValue": {
+          "$ref": "#/definitions/Status"
+        },
+        "maxValue": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "items",
+        "maxValue",
+        "minValue"
+      ],
+      "title": "WorkExperienceProperties"
+    },
+    "JobSEO": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/JobSEOProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "JobSEO"
+    },
+    "JobSEOProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "searchResultTitle": {
+          "$ref": "#/definitions/Status"
+        },
+        "metaTitle": {
+          "$ref": "#/definitions/Status"
+        },
+        "metaDescription": {
+          "$ref": "#/definitions/Status"
+        },
+        "canonicalUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "positionTitle": {
+          "$ref": "#/definitions/Error"
+        },
+        "positionDescription": {
+          "$ref": "#/definitions/Error"
+        },
+        "nextPageLink": {
+          "$ref": "#/definitions/Status"
+        },
+        "previousPageLink": {
+          "$ref": "#/definitions/Error"
+        },
+        "content": {
+          "$ref": "#/definitions/Error"
+        },
+        "contentTitle": {
+          "$ref": "#/definitions/Error"
+        },
+        "faqHtmlContent": {
+          "$ref": "#/definitions/Error"
+        },
+        "noScriptUrlResponse": {
+          "$ref": "#/definitions/NoScriptURL"
+        }
+      },
+      "required": [
+        "canonicalUrl",
+        "content",
+        "contentTitle",
+        "faqHtmlContent",
+        "metaDescription",
+        "metaTitle",
+        "nextPageLink",
+        "noScriptUrlResponse",
+        "positionDescription",
+        "positionTitle",
+        "previousPageLink",
+        "searchResultTitle"
+      ],
+      "title": "JobSEOProperties"
+    },
+    "NoScriptURL": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/NoScriptUrlsProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "NoScriptURL"
+    },
+    "NoScriptUrlsProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/Status"
+        },
+        "noScriptUrlLinks": {
+          "$ref": "#/definitions/NoScriptURLLinks"
+        }
+      },
+      "required": [
+        "noScriptUrlLinks",
+        "text"
+      ],
+      "title": "NoScriptUrlsProperties"
+    },
+    "NoScriptURLLinks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/NoScriptURLLinksItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "NoScriptURLLinks"
+    },
+    "NoScriptURLLinksItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/TentacledProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "NoScriptURLLinksItems"
+    },
+    "TentacledProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "link": {
+          "$ref": "#/definitions/Status"
+        },
+        "title": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "TentacledProperties"
+    },
+    "Jobs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/JobsProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "Jobs"
+    },
+    "JobsProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/TentacledItems"
+        },
+        "companyItems": {
+          "$ref": "#/definitions/Suggestions"
+        },
+        "companyProfileItems": {
+          "$ref": "#/definitions/Suggestions"
+        },
+        "currentPage": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "companyItems",
+        "companyProfileItems",
+        "currentPage",
+        "items"
+      ],
+      "title": "JobsProperties"
+    },
+    "TentacledItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/StickyItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "TentacledItems"
+    },
+    "StickyItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/StickyProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "StickyItems"
+    },
+    "StickyProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/Status"
+        },
+        "title": {
+          "$ref": "#/definitions/Status"
+        },
+        "companyName": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "companyUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "logoUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "fullPathLogoUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "locationText": {
+          "$ref": "#/definitions/Status"
+        },
+        "isSponsored": {
+          "$ref": "#/definitions/Status"
+        },
+        "humanReward": {
+          "$ref": "#/definitions/Status"
+        },
+        "workType": {
+          "$ref": "#/definitions/Status"
+        },
+        "workTypeText": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobDateText": {
+          "$ref": "#/definitions/Status"
+        },
+        "memberJobStatus": {
+          "$ref": "#/definitions/Status"
+        },
+        "isHandicapped": {
+          "$ref": "#/definitions/Status"
+        },
+        "isFavorite": {
+          "$ref": "#/definitions/Status"
+        },
+        "hasVideo": {
+          "$ref": "#/definitions/Status"
+        },
+        "hasIso": {
+          "$ref": "#/definitions/Status"
+        },
+        "companyId": {
+          "$ref": "#/definitions/Status"
+        },
+        "profileId": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobDateStatus": {
+          "$ref": "#/definitions/Status"
+        },
+        "postingDate": {
+          "$ref": "#/definitions/Status"
+        },
+        "confidential": {
+          "$ref": "#/definitions/Status"
+        },
+        "onlyPublishedOnKariyerNet": {
+          "$ref": "#/definitions/Status"
+        },
+        "isLogoSelected": {
+          "$ref": "#/definitions/Status"
+        },
+        "showTime": {
+          "$ref": "#/definitions/Status"
+        },
+        "positionLevel": {
+          "$ref": "#/definitions/Status"
+        },
+        "allLocations": {
+          "$ref": "#/definitions/Status"
+        },
+        "squareLogoUrl": {
+          "$ref": "#/definitions/Status"
+        },
+        "isDisaster": {
+          "$ref": "#/definitions/Status"
+        },
+        "workModel": {
+          "$ref": "#/definitions/Status"
+        },
+        "isEasyApply": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobCode": {
+          "$ref": "#/definitions/Status"
+        },
+        "sectors": {
+          "$ref": "#/definitions/Sectors"
+        },
+        "locations": {
+          "$ref": "#/definitions/FluffyLocations"
+        },
+        "appliedDetail": {
+          "$ref": "#/definitions/Error"
+        },
+        "positionId": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "allLocations",
+        "appliedDetail",
+        "companyId",
+        "companyName",
+        "companyUrl",
+        "confidential",
+        "fullPathLogoUrl",
+        "hasIso",
+        "hasVideo",
+        "humanReward",
+        "id",
+        "isDisaster",
+        "isEasyApply",
+        "isFavorite",
+        "isHandicapped",
+        "isLogoSelected",
+        "isSponsored",
+        "jobCode",
+        "jobDateStatus",
+        "jobDateText",
+        "jobUrl",
+        "locationText",
+        "locations",
+        "logoUrl",
+        "memberJobStatus",
+        "onlyPublishedOnKariyerNet",
+        "positionId",
+        "positionLevel",
+        "postingDate",
+        "profileId",
+        "sectors",
+        "showTime",
+        "squareLogoUrl",
+        "title",
+        "workModel",
+        "workType",
+        "workTypeText"
+      ],
+      "title": "StickyProperties"
+    },
+    "FluffyLocations": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/LocationsItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "FluffyLocations"
+    },
+    "LocationsItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/IndigoProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "LocationsItems"
+    },
+    "IndigoProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "countryId": {
+          "$ref": "#/definitions/Status"
+        },
+        "countryName": {
+          "$ref": "#/definitions/Status"
+        },
+        "cityId": {
+          "$ref": "#/definitions/Status"
+        },
+        "cityName": {
+          "$ref": "#/definitions/Status"
+        },
+        "jobTownLocationList": {
+          "$ref": "#/definitions/JobTownLocationList"
+        }
+      },
+      "required": [
+        "cityId",
+        "cityName",
+        "countryId",
+        "countryName",
+        "jobTownLocationList"
+      ],
+      "title": "IndigoProperties"
+    },
+    "JobTownLocationList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/JobTownLocationListItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "JobTownLocationList"
+    },
+    "JobTownLocationListItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/IndecentProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "JobTownLocationListItems"
+    },
+    "IndecentProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "townId": {
+          "$ref": "#/definitions/Status"
+        },
+        "townName": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "townId",
+        "townName"
+      ],
+      "title": "IndecentProperties"
+    },
+    "Sectors": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/SuggestionsType"
+        },
+        "items": {
+          "$ref": "#/definitions/SectorsItems"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "Sectors"
+    },
+    "SectorsItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BlueCollarJobsType"
+        },
+        "properties": {
+          "$ref": "#/definitions/HilariousProperties"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties",
+        "required",
+        "type"
+      ],
+      "title": "SectorsItems"
+    },
+    "HilariousProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/definitions/Status"
+        },
+        "name": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "code",
+        "name"
+      ],
+      "title": "HilariousProperties"
+    },
+    "SuggestionsType": {
+      "type": "string",
+      "enum": [
+        "array"
+      ],
+      "title": "SuggestionsType"
+    },
+    "StatusType": {
+      "type": "string",
+      "enum": [
+        "number",
+        "string",
+        "boolean"
+      ],
+      "title": "StatusType"
+    },
+    "BlueCollarJobsType": {
+      "type": "string",
+      "enum": [
+        "object"
+      ],
+      "title": "BlueCollarJobsType"
+    },
+    "BreadCrumbRequired": {
+      "type": "string",
+      "enum": [
+        "items"
+      ],
+      "title": "BreadCrumbRequired"
+    },
+    "ItemsRequired": {
+      "type": "string",
+      "enum": [
+        "name",
+        "value",
+        "count",
+        "isSelected"
+      ],
+      "title": "ItemsRequired"
+    }
+  }
+}
